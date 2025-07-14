@@ -8,3 +8,4 @@ Routes:
 /play #play default file path
 /play?file=/path/to/sound.mp3
 
+Adjust Pi audio with `alsamixer`
