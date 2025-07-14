@@ -1,0 +1,19 @@
+[Unit]
+Description=Doorbell Go Web Server
+After=network.target
+
+[Service]
+Type=simple
+User=doorbell
+WorkingDirectory=/home/doorbell
+ExecStart=/home/doorbell/server
+Restart=on-failure
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=doorbell-server
+Environment=PORT=8080
+
+[Install]
+WantedBy=multi-user.target
+
